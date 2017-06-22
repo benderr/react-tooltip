@@ -63,7 +63,7 @@
   padding: 8px 21px;
   position: fixed;
   pointer-events: none;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.2s;
   top: -999em;
   visibility: hidden;
   z-index: 999;
@@ -75,14 +75,14 @@
     position: absolute;
   }
   &.show {
-    opacity: 0.9;
+    opacity: 1;
     margin-top: 0px;
     margin-left: 0px;
     visibility: visible;
   }
   &.type-dark {
     color: #fff;
-    @include type(#222);
+    @include type(#35414C);
     &.border {
       @include border(#fff);
     }
@@ -103,7 +103,7 @@
   }
   &.type-error {
     color: #fff;
-    @include type(#BE6464);
+    @include type(#E54D4D);
     &.border {
       @include border(#fff);
     }
