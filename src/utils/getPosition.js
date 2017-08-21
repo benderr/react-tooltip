@@ -299,9 +299,10 @@ const getIEVersion = () => {
 // Get the offset of the parent elements
 const getParent = (currentTarget) => {
   let currentParent = currentTarget;
-  const ieVersion=getIEVersion();
+  const ieVersion = getIEVersion();
+  const checkTransform = ieVersion==false || ieVersion>11;
   while (currentParent) {
-    if (ieVersion==false && window.getComputedStyle(currentParent).getPropertyValue('transform') !== 'none')
+    if (checkTransform && window.getComputedStyle(currentParent).getPropertyValue('transform') !== 'none')
         break;
     currentParent = currentParent.parentElement
   }
