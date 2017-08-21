@@ -9,7 +9,7 @@ MOCHA_OPTS   = --compilers js:babel-core/register --require test/setup.js -b --t
 
 lint:
 	@echo Linting...
-	@$(NODE_BIN)/standard --verbose | $(NODE_BIN)/snazzy src/index.js
+
 
 test: lint
 	@echo Start testing...
