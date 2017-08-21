@@ -2409,8 +2409,9 @@ var getIEVersion = function getIEVersion() {
 var getParent = function getParent(currentTarget) {
   var currentParent = currentTarget;
   var ieVersion = getIEVersion();
+  var checkTransform = ieVersion == false || ieVersion > 11;
   while (currentParent) {
-    if (ieVersion == false && window.getComputedStyle(currentParent).getPropertyValue('transform') !== 'none') break;
+    if (checkTransform && window.getComputedStyle(currentParent).getPropertyValue('transform') !== 'none') break;
     currentParent = currentParent.parentElement;
   }
 
